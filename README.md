@@ -22,6 +22,10 @@ JavaScript (ES6): Lógica de operações da calculadora.
 Git/GitHub: Controle de versão e compartilhamento do código.
 
 
+Acesso ao site:
+https://aliciaafoliveira.github.io/calculadora-simples/
+
+
 🚀 Como Usar
 Clone o repositório no seu computador:
 
