@@ -1,20 +1,22 @@
-const display = document.getElementById('display');
-const buttons = document.querySelectorAll('button');
+function insert(num) {
+    var numero = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = numero + num;
+}
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const value = button.textContent;
+function clean() {
+    document.getElementById('resultado').innerHTML = "";
+}
 
-        if (value === 'C') {
-            display.value = '';
-        } else if (value === '=') {
-            try {
-                display.value = eval(display.value);
-            } catch {
-                display.value = 'Erro';
-            }
-        } else {
-            display.value += value;
-        }
-    });
-});
+function back() {
+    var resultado = document.getElementById('resultado').innerHTML;
+    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
+}
+
+function calcular() {
+    var resultado = document.getElementById('resultado').innerHTML;
+    if (resultado) {
+        document.getElementById('resultado').innerHTML = eval(resultado);
+    } else {
+        document.getElementById('resultado').innerHTML = "Error";
+    }
+}
